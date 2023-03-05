@@ -91,10 +91,6 @@ input[type=checkbox], input[type=radio] {
     box-shadow:  0 16px 24px 0 lightgrey !important;
 }
 
-.card-dark-theme {
-    background-color: ;
-}
-
 .center {
     display: flex;
     justify-content: center;
