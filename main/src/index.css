@@ -1,0 +1,137 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.white-theme {
+    background-color: white;
+}
+
+.dark-theme {
+    background-color: #3B3B3B;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.container .row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container .row .col-1 {
+    flex: 100%;
+}
+
+.container .row .col-2 {
+    flex: 50%;
+}
+
+.container .row .col-3 {
+    flex: 33.33%;
+}
+
+.container .row .col-4{
+    flex: 25%;
+}
+
+.container .row .col-5 {
+    flex: 20%;
+}
+
+.container .row .col-6 {
+    flex: 16.66%;
+}
+
+input[type=text] {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    outline: none;
+    width: 99.7%;
+    line-height: 40px;
+    box-sizing: content-box;
+    padding: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+    border: 1px solid lightgrey;
+    outline: none;
+    margin: 0;
+}
+
+.label {
+    font-weight: 600;
+    color: lightslategrey;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.label-radio {
+    margin: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    box-shadow:  0 4px 8px 0 lightgrey;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.card:hover {
+    box-shadow:  0 16px 24px 0 lightgrey !important;
+}
+
+.card-dark-theme {
+    background-color: ;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+button[type=submit] {
+    background-color: cornflowerblue;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.img-contrast {
+    width: 35px;
+}
+
+.invert-1 {
+    filter: invert(1);
+}
+
+.img-recibo {
+    width: 35px;
+    filter: invert(1);
+}
