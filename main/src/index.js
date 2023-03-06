@@ -13,6 +13,7 @@ function whiteMode() {
 
     document.getElementById("img-contrast").src = "/main/assets/icon/moon-outline.svg"; //icon-mode
     document.getElementById("img-contrast").classList.remove("invert-1"); //icon-mode
+    document.getElementById("titulo").classList.remove("invert-1"); //titulo
 
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#eeeeee"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#000000"; //input[type=text]
@@ -24,6 +25,7 @@ function darkMode() {
 
     document.getElementById("img-contrast").src = "/main/assets/icon/sunny-outline.svg"; //icon-mode
     document.getElementById("img-contrast").classList.add("invert-1"); //icon-mode
+    document.getElementById("titulo").classList.add("invert-1"); //titulo
 
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#222222"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#ffffff"; //input[type=text]
