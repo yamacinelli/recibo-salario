@@ -33,5 +33,16 @@ function darkMode() {
 }
 
 function onlyNumbers(inputId) {
-    document.getElementById(inputId).value = document.getElementById(inputId).value.replace(/\D/g, "");
+    document.getElementById(inputId).value = document.getElementById(inputId).value.replace(/^[\D,]/g, "");
+}
+
+function currencyFormat() {
+    const formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        maximumFractionDigits: 2,
+        useGrouping: true,
+    });
+    const value = document.getElementById("valor").value.replace(',', '.');
+    document.getElementById("valor").value = formatter.format(value);
 }
