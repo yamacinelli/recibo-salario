@@ -3,11 +3,11 @@
 }
 
 .white-theme {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .dark-theme {
-    background-color: #3B3B3B;
+    background-color: #111111;
 }
 
 .container {
@@ -51,7 +51,9 @@
 }
 
 input[type=text] {
-    border: 1px solid lightgrey;
+    background-color: #eeeeee;
+    color: black;
+    border: 0;
     border-radius: 10px;
     outline: none;
     width: 99.7%;
@@ -61,7 +63,6 @@ input[type=text] {
 }
 
 input[type=checkbox], input[type=radio] {
-    border: 1px solid lightgrey;
     outline: none;
     margin: 0;
 }
@@ -76,6 +77,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .label-radio {
+    color: black;
     margin: 10px;
 }
 
@@ -97,7 +99,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 span {
-    color: red;
+    color: dodgerblue;
     font-size: 12px;
 }
 

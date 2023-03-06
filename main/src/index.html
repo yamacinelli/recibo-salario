@@ -16,32 +16,32 @@
     </div>
 
     <div class="center">
-        <div class="card">
             <div class="container">
                 <div class="row">
                     <div class="col-1">
-                        <h2>Recibo de Salário</h2>
+                        <h2 id="titulo">Recibo de Salário</h2>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="valor">Valor</label>
-                        <input type="text" id="valor" placeholder="0,00" oninput="onlyNumbers('valor')" required>
+                        <input class="input-white-theme" type="text" id="valor" placeholder="0,00" oninput="onlyNumbers('valor')" required>
+                        <span>Valor recebido</span>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="empregado">Empregado</label>
-                        <input type="text" id="empregado" required>
+                        <input class="input-white-theme" type="text" id="empregado" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="aTituloDe">À título de</label>
-                        <input type="text" id="aTituloDe" required>
+                        <input class="input-white-theme" type="text" id="aTituloDe" required>
                         <span>Ex: Adiantamento salarial, assitência médica, odontológica, etc.</span>
                     </div>
                 </div>
@@ -49,21 +49,21 @@
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="remuneracaoMensal">Remuneração mensal relativa a folha do mês</label>
-                        <input type="text" id="remuneracaoMensal" placeholder="Fevereiro 2023" required>
+                        <input class="input-white-theme" type="text" id="remuneracaoMensal" placeholder="Fevereiro 2023" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="empregador">Empregador</label>
-                        <input type="text" id="empregador" required>
+                        <input class="input-white-theme" type="text" id="empregador" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="cpf_cnpj">CPF ou CNPJ</label>
-                        <input type="text" id="cpf_cnpj" placeholder="00000000000" maxlength="14" oninput="onlyNumbers('cpf_cnpj')" required>
+                        <input class="input-white-theme" type="text" id="cpf_cnpj" placeholder="00000000000" maxlength="14" oninput="onlyNumbers('cpf_cnpj')" required>
                         <span>Somente números</span>
                     </div>
                 </div>
@@ -71,11 +71,11 @@
                 <div class="row">
                     <div class="col-2">
                         <label class="label" for="cidade">Cidade</label>
-                        <input type="text" id="cidade" required>
+                        <input class="input-white-theme" type="text" id="cidade" required>
                     </div>
                     <div class="col-2">
                         <label class="label" for="data">Data</label>
-                        <input type="text" id="data" type="date" required>
+                        <input class="input-white-theme" type="text" id="data" type="date" required>
                     </div>
                 </div>
 
@@ -109,7 +109,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 <script src="index.js"></script>
 </body>
