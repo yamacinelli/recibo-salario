@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-1">
                         <label class="label" for="cpf_cnpj">CPF ou CNPJ</label>
-                        <input class="input-white-theme" type="text" id="cpf_cnpj" placeholder="00000000000" maxlength="14" oninput="onlyNumbers('cpf_cnpj')" required>
+                        <input class="input-white-theme" type="text" id="cpf_cnpj" placeholder="00000000000" maxlength="14" oninput="onlyNumbers('cpf_cnpj')" onchange="cpfCnpjFormat()" required>
                         <span>Somente números</span>
                     </div>
                 </div>
@@ -75,24 +75,31 @@
                     </div>
                     <div class="col-2">
                         <label class="label" for="data">Data</label>
-                        <input class="input-white-theme" type="text" id="data" type="date" required>
+                        <input class="input-white-theme" type="date" id="data" type="date" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <label class="label">Forma de Pagamento</label>
 
-                    <input id="dinheiro" type="radio" name="radio-button" value="Dinheiro">
+                    <input id="dinheiro" type="radio" name="radio-button" value="Dinheiro" onclick="radioSelected(dinheiro)">
                     <label class="label-radio" for="dinheiro">Dinheiro</label>
 
-                    <input id="pix" type="radio" name="radio-button" value="PIX">
+                    <input id="pix" type="radio" name="radio-button" value="PIX" onclick="radioSelected(pix)">
                     <label class="label-radio" for="pix">PIX</label>
 
-                    <input id="cheque" type="radio" name="radio-button" value="Cheque">
+                    <input id="cheque" type="radio" name="radio-button" value="Cheque" onclick="radioSelected(cheque)">
                     <label class="label-radio" for="cheque">Cheque</label>
 
-                    <input id="tranferenciaDeposito" type="radio" name="radio-button" value="Transferência/Depósito">
+                    <input id="tranferenciaDeposito" type="radio" name="radio-button" value="Transferência/Depósito" onclick="radioSelected(tranferenciaDeposito)">
                     <label class="label-radio" for="tranferenciaDeposito">Transferência/Depósito</label>
+                </div>
+
+                <div class="row-chave">
+                    <div class="row">
+                        <label class="label" for="chave">Chave</label>
+                        <input class="white-theme" type="text" id="chave">
+                    </div>
                 </div>
 
                 <div class="row">
@@ -109,6 +116,22 @@
                 </div>
             </div>
         </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <h3>Recibo de Salário</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p>Eu,</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <script src="index.js"></script>
 </body>

@@ -50,7 +50,7 @@
     flex: 16.66%;
 }
 
-input[type=text] {
+input[type=text], input[type=date] {
     background-color: #eeeeee;
     color: black;
     border: 0;
@@ -132,4 +132,36 @@ button[type=submit] {
 .img-recibo {
     width: 35px;
     filter: invert(1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+}
+
+.modal-content {
+    position: center;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 8px 16px 0;
+    animation-name: animastop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animastop {
+    from { top: -300px; opacity: 0 }
+    to { top:0; opacity: 1 }
+}
+
+.row-chave {
+    display: none;
 }
