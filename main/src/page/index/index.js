@@ -12,11 +12,12 @@ function whiteMode() {
 
     document.getElementById("img-contrast").src = "/main/assets/icon/moon-outline.svg"; //icon-mode
     document.getElementById("img-contrast").classList.remove("invert-1"); //icon-mode
-    document.getElementById("titulo").classList.remove("invert-1"); //titulo
-
+    
+    document.styleSheets.item(0).cssRules.item(3).style.color = "#000000"; //container
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#eeeeee"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#000000"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(14).style.color = "#000000"; //label-radio
+    document.styleSheets.item(0).cssRules.item(25).style.backgroundColor = "#ffffff"; //modal-content
 }
 
 function darkMode() {
@@ -24,11 +25,12 @@ function darkMode() {
 
     document.getElementById("img-contrast").src = "/main/assets/icon/sunny-outline.svg"; //icon-mode
     document.getElementById("img-contrast").classList.add("invert-1"); //icon-mode
-    document.getElementById("titulo").classList.add("invert-1"); //titulo
 
+    document.styleSheets.item(0).cssRules.item(3).style.color = "#ffffff"; //container
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#222222"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#ffffff"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(14).style.color = "#ffffff"; //label-radio
+    document.styleSheets.item(0).cssRules.item(25).style.backgroundColor = "#222222"; //modal-content
 }
 
 function onlyNumbers(inputId) {
