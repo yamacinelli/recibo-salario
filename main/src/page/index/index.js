@@ -1,4 +1,3 @@
-
 function changeTheme() {
     let theme = document.body.classList[0];
     if (theme === "white-theme") {
@@ -56,7 +55,15 @@ function cpfCnpjFormat() {
 }
 
 function radioSelected(radio) {
-        radio.value === "PIX" && radio.checked ?
-            document.styleSheets.item(0).cssRules.item(27).style.display = "block" :
-            document.styleSheets.item(0).cssRules.item(27).style.display = "none"; //row-chave
+    radio.value === "PIX" && radio.checked ?
+        document.styleSheets.item(0).cssRules.item(27).style.display = "block" :
+        document.styleSheets.item(0).cssRules.item(27).style.display = "none"; //row-chave
+}
+
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+window.onclick = function (event) {
+    if (event.target === modal) document.getElementById("modal").style.display = "none";
 }
