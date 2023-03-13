@@ -131,7 +131,7 @@ button[type=submit], button[type=button] {
     filter: invert(1);
 }
 
-.img-recibo {
+.img-button {
     width: 35px;
     filter: invert(1);
 }

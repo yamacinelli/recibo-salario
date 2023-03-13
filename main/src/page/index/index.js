@@ -1,4 +1,6 @@
 
+window.addEventListener("load", obtainDate);
+
 function changeTheme() {
     let theme = document.body.classList[0];
     if (theme === "white-theme") {
@@ -36,7 +38,6 @@ function darkMode() {
 
 function onlyNumbers(inputId) {
     document.getElementById(inputId).value = document.getElementById(inputId).value.replace(/[^\,0-9]*$/, "");
-    if (inputId === "cpf_cnpj") cpfCnpjFormat()
 }
 
 function currencyFormat() {
@@ -57,6 +58,17 @@ function cpfCnpjFormat() {
         : document.getElementById("cpf_cnpj").value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 }
 
+function obtainDate() {
+    let date = new Date();
+    date.setDate(1);
+    let month = date.toLocaleString("pt-br", { month: "long" });
+    document.getElementById("remuneracaoMensal").value = capitalize(month) + " " + date.getFullYear();
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function radioSelected(radio) {
     radio.value === "PIX" && radio.checked ?
         document.styleSheets.item(0).cssRules.item(27).style.display = "block" :
@@ -65,6 +77,7 @@ function radioSelected(radio) {
 
 function openModal() {
     obtainValueForm();
+    writeModal();
     document.getElementById("modal").style.display = "block";
 }
 
@@ -80,6 +93,18 @@ function obtainValueForm() {
     empregador = document.getElementById("empregador").value;
     cpfCnpj = document.getElementById("cpf_cnpj").value;
     cidade = document.getElementById("cidade").value;
-    data = document.getElementById("data").value;
+    data = new Date(document.getElementById("data").value);
     chave = document.getElementById("chave").value;
+}
+
+function writeModal() {
+    // document.getElementById("valorWrite").textContent = valor;
+    document.getElementById("empregadoWrite").textContent = empregado;
+    document.getElementById("aTituloDeWrite").textContent = aTituloDe;
+    document.getElementById("remuneracaoMensalWrite").textContent = remuneracaoMensal;
+    document.getElementById("empregadorWrite").textContent = empregador;
+    document.getElementById("cpf_cnpjWrite").textContent = cpfCnpj;
+    document.getElementById("cidadeWrite").textContent = cidade;
+    document.getElementById("dataWrite").textContent = data.getDate() + " de " + capitalize(data.toLocaleString("pt-br", { month: "long" })) + " de " + data.getFullYear();
+    // document.getElementById("chaveWrite").textContent = chave;
 }
