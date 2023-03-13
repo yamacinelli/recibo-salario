@@ -1,3 +1,4 @@
+
 function changeTheme() {
     let theme = document.body.classList[0];
     if (theme === "white-theme") {
@@ -12,7 +13,7 @@ function whiteMode() {
 
     document.getElementById("img-contrast").src = "/main/assets/icon/moon-outline.svg"; //icon-mode
     document.getElementById("img-contrast").classList.remove("invert-1"); //icon-mode
-    
+
     document.styleSheets.item(0).cssRules.item(3).style.color = "#000000"; //container
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#eeeeee"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#000000"; //input[type=text]
@@ -63,9 +64,22 @@ function radioSelected(radio) {
 }
 
 function openModal() {
+    obtainValueForm();
     document.getElementById("modal").style.display = "block";
 }
 
 window.onclick = function (event) {
     if (event.target === modal) document.getElementById("modal").style.display = "none";
+}
+
+function obtainValueForm() {
+    valor = document.getElementById("valor").value;
+    empregado = document.getElementById("empregado").value;
+    aTituloDe = document.getElementById("aTituloDe").value;
+    remuneracaoMensal = document.getElementById("remuneracaoMensal").value;
+    empregador = document.getElementById("empregador").value;
+    cpfCnpj = document.getElementById("cpf_cnpj").value;
+    cidade = document.getElementById("cidade").value;
+    data = document.getElementById("data").value;
+    chave = document.getElementById("chave").value;
 }
