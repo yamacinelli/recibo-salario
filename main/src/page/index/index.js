@@ -99,12 +99,13 @@ function obtainValueForm() {
 
 function writeModal() {
     document.getElementById("valorWrite").textContent = valor;
-    document.getElementById("empregadoWrite").textContent = empregado;
-    document.getElementById("aTituloDeWrite").textContent = aTituloDe;
-    document.getElementById("remuneracaoMensalWrite").textContent = remuneracaoMensal;
-    document.getElementById("empregadorWrite").textContent = empregador;
+    document.getElementById("empregadoWrite").textContent = empregado.toUpperCase();
+    document.getElementById("aTituloDeWrite").textContent = aTituloDe.toUpperCase();
+    document.getElementById("remuneracaoMensalWrite").textContent = remuneracaoMensal.toUpperCase();
+    document.getElementById("empregadorWrite").textContent = empregador.toUpperCase();
     document.getElementById("cpf_cnpjWrite").textContent = cpfCnpj;
     document.getElementById("cidadeWrite").textContent = cidade;
     document.getElementById("dataWrite").textContent = data.getDate() + " de " + capitalize(data.toLocaleString("pt-br", { month: "long" })) + " de " + data.getFullYear();
     // document.getElementById("chaveWrite").textContent = chave;
+    document.getElementById("assinaturaWrite").textContent = empregado;
 }

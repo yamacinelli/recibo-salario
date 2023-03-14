@@ -117,6 +117,15 @@ span {
     float: right;
 }
 
+.span-write-data {
+    text-align: left;
+}
+
+.assinatura-line {
+    border-bottom: 4px groove;
+    width: 400px;
+}
+
 button {
     background-color: transparent;
     border: 0;
