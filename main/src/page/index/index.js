@@ -20,7 +20,7 @@ function whiteMode() {
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#eeeeee"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#000000"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(14).style.color = "#000000"; //label-radio
-    document.styleSheets.item(0).cssRules.item(25).style.backgroundColor = "#ffffff"; //modal-content
+    document.styleSheets.item(0).cssRules.item(29).style.backgroundColor = "#ffffff"; //modal-content
 }
 
 function darkMode() {
@@ -33,7 +33,7 @@ function darkMode() {
     document.styleSheets.item(0).cssRules.item(11).style.backgroundColor = "#222222"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(11).style.color = "#ffffff"; //input[type=text]
     document.styleSheets.item(0).cssRules.item(14).style.color = "#ffffff"; //label-radio
-    document.styleSheets.item(0).cssRules.item(25).style.backgroundColor = "#222222"; //modal-content
+    document.styleSheets.item(0).cssRules.item(29).style.backgroundColor = "#222222"; //modal-content
 }
 
 function onlyNumbers(inputId) {
@@ -71,8 +71,8 @@ function capitalize(string) {
 
 function radioSelected(radio) {
     radio.value === "PIX" && radio.checked ?
-        document.styleSheets.item(0).cssRules.item(27).style.display = "block" :
-        document.styleSheets.item(0).cssRules.item(27).style.display = "none"; //row-chave
+        document.styleSheets.item(0).cssRules.item(31).style.display = "block" :
+        document.styleSheets.item(0).cssRules.item(31).style.display = "none"; //row-chave
 }
 
 function openModal() {
@@ -103,7 +103,7 @@ function writeModal() {
     document.getElementById("aTituloDeWrite").textContent = aTituloDe.toUpperCase();
     document.getElementById("remuneracaoMensalWrite").textContent = remuneracaoMensal.toUpperCase();
     document.getElementById("empregadorWrite").textContent = empregador.toUpperCase();
-    document.getElementById("cpf_cnpjWrite").textContent = cpfCnpj;
+    document.getElementById("cpf_cnpjWrite").textContent = cpfCnpj.length > 14 ? "CNPJ: " + cpfCnpj : "CPF: " + cpfCnpj;
     document.getElementById("cidadeWrite").textContent = cidade;
     document.getElementById("dataWrite").textContent = data.getDate() + " de " + capitalize(data.toLocaleString("pt-br", { month: "long" })) + " de " + data.getFullYear();
     // document.getElementById("chaveWrite").textContent = chave;
