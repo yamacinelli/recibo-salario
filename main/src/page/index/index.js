@@ -98,7 +98,7 @@ function obtainValueForm() {
 }
 
 function writeModal() {
-    // document.getElementById("valorWrite").textContent = valor;
+    document.getElementById("valorWrite").textContent = valor;
     document.getElementById("empregadoWrite").textContent = empregado;
     document.getElementById("aTituloDeWrite").textContent = aTituloDe;
     document.getElementById("remuneracaoMensalWrite").textContent = remuneracaoMensal;

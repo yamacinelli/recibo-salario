@@ -105,6 +105,18 @@ span {
     font-size: 12px;
 }
 
+.span-write {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.span-write-valor {
+    border-style: groove;
+    width: 200px;
+    text-align: center;
+    float: right;
+}
+
 button {
     background-color: transparent;
     border: 0;
